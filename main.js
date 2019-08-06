@@ -131,3 +131,7 @@ m1.delegateWork();
 m1.greet();
 console.log(m1.employeeName);
 /* ACCESS MODIFIERS  */
+//access modifiers are keywords that set the accessibility of properties and methods in a class
+//by default each class member is public and can be accessed throughout the program
+//if you make a class member private, it cannot be accessed from outside its containing class 
+//if you make a class member protected, it can be accessed within its parent class and the extended class only

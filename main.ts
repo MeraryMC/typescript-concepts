@@ -55,3 +55,18 @@ if(hasName(myVariable)) {
 }
 
 (myVariable as string).toUpperCase();
+
+//this behaves like regular JS
+let a;
+a = 10;
+a = true;
+
+//this will give a red squiggly error because TS is inferring the var type
+let b = 20;
+// b = true;
+
+//a var can have several different types; good for when the var aren't under your control
+let multiType: number | boolean;
+multiType = 20;
+multiType = true;
+

@@ -45,3 +45,14 @@ if (hasName(myVariable)) {
     console.log(myVariable.name);
 }
 myVariable.toUpperCase();
+//this behaves like regular JS
+var a;
+a = 10;
+a = true;
+//this will give a red squiggly error because TS is inferring the var type
+var b = 20;
+// b = true;
+//a var can have several different types; good for when the var aren't under your control
+var multiType;
+multiType = 20;
+multiType = true;

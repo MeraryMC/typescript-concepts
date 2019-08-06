@@ -20,12 +20,28 @@ var myName = undefined;
 var list1 = [1, 2, 3];
 var list2 = [1, 2, 3];
 var person1 = ['Merary', 26];
+//Data Type - Enums allow us to declare a set of named constants i.e. a collection of related values that can be numeric or string values.
 var Color;
 (function (Color) {
     Color[Color["Red"] = 6] = "Red";
     Color[Color["Green"] = 7] = "Green";
     Color[Color["Blue"] = 8] = "Blue";
 })(Color || (Color = {}));
-; //Data Type - Enums allow us to declare a set of named constants i.e. a collection of related values that can be numeric or string values.
+;
 var c = Color.Green;
 console.log(c);
+//any type
+var randomValue = 10;
+randomValue = true;
+randomValue = 'Merary';
+//uknown type
+var myVariable = 10;
+function hasName(obj) {
+    return !!obj &&
+        typeof obj === "object" &&
+        "name" in obj;
+}
+if (hasName(myVariable)) {
+    console.log(myVariable.name);
+}
+myVariable.toUpperCase();

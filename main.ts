@@ -31,6 +31,27 @@ let list2: Array<number> = [1, 2, 3];
 
 let person1: [string, number] = ['Merary', 26];
 
-enum Color {Red = 6, Green, Blue}; //Data Type - Enums allow us to declare a set of named constants i.e. a collection of related values that can be numeric or string values.
+//Data Type - Enums allow us to declare a set of named constants i.e. a collection of related values that can be numeric or string values.
+enum Color {Red = 6, Green, Blue}; 
 let c: Color = Color.Green;
 console.log(c);
+
+//any type
+let randomValue: any = 10;
+randomValue = true;
+randomValue = 'Merary';
+
+//uknown type
+let myVariable: unknown = 10;
+
+function hasName(obj: any): obj is { name: string } {
+    return !!obj &&
+        typeof obj === "object" && 
+        "name" in obj
+}
+
+if(hasName(myVariable)) {
+    console.log(myVariable.name);
+}
+
+(myVariable as string).toUpperCase();

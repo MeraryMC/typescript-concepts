@@ -14,3 +14,23 @@ let isBeginner: boolean = true;
 let total: number = 0;
 let name: string = "Merary"
 
+let sentence: string = `My name is ${name}. 
+I am a beginner in TypeScript;.`;
+
+console.log(sentence);
+
+let n: null = null;
+let u: undefined = undefined;
+
+let isNew: boolean = null;
+let myName: string = undefined;
+
+//The two ways of declaring an array are equivalent
+let list1: number[] = [1, 2, 3]; 
+let list2: Array<number> = [1, 2, 3];
+
+let person1: [string, number] = ['Merary', 26];
+
+enum Color {Red = 6, Green, Blue}; //Data Type - Enums allow us to declare a set of named constants i.e. a collection of related values that can be numeric or string values.
+let c: Color = Color.Green;
+console.log(c);

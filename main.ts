@@ -153,3 +153,6 @@ let m1 = new Manager('Merary');
 m1.delegateWork();
 m1.greet();
 console.log(m1.employeeName);
+
+/* ACCESS MODIFIERS  */
+

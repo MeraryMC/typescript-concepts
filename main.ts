@@ -70,3 +70,18 @@ let multiType: number | boolean;
 multiType = 20;
 multiType = true;
 
+let anyType: any;
+anyType = 20;
+
+/* FUNCTIONS */ 
+
+function add(num1: number, num2?: number): number {
+    if (num2)
+        return num1 + num2;
+    else        
+        return num1;
+}
+
+add(5, 10)
+add(5);
+

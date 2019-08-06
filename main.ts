@@ -75,6 +75,9 @@ anyType = 20;
 
 /* FUNCTIONS */ 
 
+//the ? after num2 allows us to call the function with just one parameter; 
+//optional parameters must always be after required ones, so if you wanted num1 to 
+//be optional, you would have to change the param order 
 function add(num1: number, num2?: number): number {
     if (num2)
         return num1 + num2;
@@ -85,3 +88,35 @@ function add(num1: number, num2?: number): number {
 add(5, 10)
 add(5);
 
+//default params: like optional ones but with default values instead of undefined
+function add2(num1: number, num2: number = 10): number {
+    if (num2)
+        return num1 + num2;
+    else        
+        return num1;
+}
+
+add2(5, 10)
+add2(5);
+
+/* INTERFACES */ 
+
+//It's possible to specify objs as a type in TS
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+//we want to have 'person' be an interface because this way any changes to Person would happen in one place and
+//it is much easier to maintain the code
+function fullName(person : Person) {
+    console.log(`${person.firstName} ${person.lastName}`);
+}
+
+let p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+
+fullName(p);
